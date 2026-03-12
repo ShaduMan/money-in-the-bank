@@ -1,0 +1,13 @@
+# Node.js dependencies
+node_modules/
+npm-debug.log
+
+# Environment variables
+.env
+
+# Build outputs
+/dist
+/build
+
+# Optional OS files
+.DS_Store

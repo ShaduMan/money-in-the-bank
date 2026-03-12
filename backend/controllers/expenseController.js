@@ -1,3 +1,4 @@
+import Expense from "../models/Expense.js";
 
 //GET Expense
 

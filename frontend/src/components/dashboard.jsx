@@ -1,0 +1,25 @@
+import ExpenseForm from "./ExpenseForm";
+import ExpenseCard from "./ExpenseCard";
+import useExpenses from "../hooks/useExpenses";
+import { AnimatePresence } from "framer-motion";
+
+export default function Dashboard() {
+    const { expenses, fetchExpenses } = useExpenses();
+
+    return (
+        <div style={{ maxWidth: "600px", margin: "40px auto" }}>
+            <h1>Student Finance Tracker</h1>
+            <ExpenseForm refresh={fetchExpenses} />
+
+            <AnimatePresence>
+                {expenses.map((expense) => (
+                    <ExpenseCard
+                        key={expense._id}
+                        expense={expense}
+                        refresh={fetchExpenses}
+                    />
+                ))}
+            </AnimatePresence>
+        </div>
+    );
+}
