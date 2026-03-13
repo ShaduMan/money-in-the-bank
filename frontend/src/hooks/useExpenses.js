@@ -3,6 +3,7 @@ import { getExpenses } from "../services/api";
 
 export default function useExpenses() {
     const [expenses, setExpenses] = useState([]);
+    const [loading, setLoading] = useState(true);
 
     const fetchExpenses = async () => {
         try {
@@ -17,5 +18,5 @@ export default function useExpenses() {
         fetchExpenses();
     }, []);
 
-    return { expenses, fetchExpenses, setExpenses };
+    return { expenses, fetchExpenses, setExpenses, setLoading };
 }

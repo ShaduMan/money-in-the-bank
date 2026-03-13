@@ -9,3 +9,4 @@ export const getExpenses = () => API.get("/expenses");
 export const addExpense = (expense) => API.post("/expenses", expense);
 export const updateExpense = (id, expense) => API.put(`/expenses/${id}`, expense);
 export const deleteExpense = (id) => API.delete(`/expenses/${id}`);
+export const getSpendingForecast = () => API.get("/expenses/forecast");

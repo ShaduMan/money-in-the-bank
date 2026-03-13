@@ -5,13 +5,13 @@ import useExpenses from "../hooks/useExpenses";
 import { AnimatePresence } from "framer-motion";
 
 export default function Dashboard() {
-    const { expenses, fetchExpenses } = useExpenses();
+    const { expenses, fetchExpenses, loading } = useExpenses();
 
     return (
         <div style={{ maxWidth: "600px", margin: "40px auto" }}>
             <h1>Student Finance Tracker</h1>
 
-            <ForecastBox /> 
+            <ForecastBox expenses={expenses} /> 
       
             <hr style={{ margin: "20px 0", opacity: 0.2 }} /> 
             
